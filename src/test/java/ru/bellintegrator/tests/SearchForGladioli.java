@@ -28,7 +28,7 @@ public class SearchForGladioli extends BaseTest {
     @Feature("Проверка поиска")
     @Test
     public void searchForGladioliPressButton(){
-        homeGoogle.open("https://www.google.ru/");
+        homeGoogle.open(GOOGLE_PAGE);
         homeGoogle.findAndPressButton("Гладиолус");
         driver.findElement(By.xpath("//a[contains(@href,'https://ru.wikipedia.org/')]"));
     }
