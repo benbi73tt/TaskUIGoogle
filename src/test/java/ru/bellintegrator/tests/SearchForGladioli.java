@@ -23,7 +23,13 @@ public class SearchForGladioli extends BaseTest {
         homeGoogle.open("https://www.google.ru/");
         homeGoogle.findAndPressEnter("Гладиолус");
         driver.findElement(By.xpath("//a[contains(@href,'https://ru.wikipedia.org/')]"));
+    }
 
-
+    @Feature("Проверка поиска")
+    @Test
+    public void searchForGladioliPressButton(){
+        homeGoogle.open("https://www.google.ru/");
+        homeGoogle.findAndPressButton("Гладиолус");
+        driver.findElement(By.xpath("//a[contains(@href,'https://ru.wikipedia.org/')]"));
     }
 }
